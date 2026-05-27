@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f8f8f8; 
+        }
+
+        .formBox {
+            width: 400px;
+            background-color: rgb(167, 171, 183);
+            padding: 20px;
+            margin: auto;
+          
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: rgb(38, 193, 48);
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        output {
+            color: green;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="formBox">
+        <h2>Event Registration Form</h2>
+        <form onsubmit="showMessage(); return false;">
+            Name:
+            <input type="text"
+                   placeholder="Enter your name"
+                   required
+                   autofocus>
+            Email:
+            <input type="email"
+                   placeholder="Enter your email"
+                   required>
+
+            Event Date:
+            <input type="date"
+                   required>
+
+            Event Type:
+            <select required>
+
+                <option value="">Select Event</option>
+                <option>Music Event</option>
+                <option>Sports Event</option>
+                <option>Workshop</option>
+            </select>
+
+            Message:
+            <textarea placeholder="Enter message"
+                      rows="4"
+                      required></textarea>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <br><br>
+
+            <output id="msg"></output>
+
+        </form>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("msg").innerHTML =
+            "Registration submitted successfully!";
+        }
+    </script>
+
+</body>
+</html>
