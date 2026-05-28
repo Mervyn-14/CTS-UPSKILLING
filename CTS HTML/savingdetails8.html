@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Example</title>
+</head>
+
+<body>
+
+    <h2>Select Event</h2>
+
+    <select id="event">
+
+        <option value="">Choose Event</option>
+        <option>Music Event</option>
+        <option>Sports Event</option>
+        <option>Workshop</option>
+
+    </select>
+
+    <br><br>
+
+    <button onclick="saveData()">
+        Save Preference
+    </button>
+
+    <button onclick="clearData()">
+        Clear Preferences
+    </button>
+
+    <script>
+
+        let saved =
+        localStorage.getItem("eventType");
+
+        if(saved) {
+            document.getElementById("event").value =
+            saved;
+        }
+
+        function saveData() {
+
+            let event =
+            document.getElementById("event").value;
+            localStorage.setItem("eventType", event);
+            sessionStorage.setItem("temp", "saved");
+            alert("Preference Saved");
+        }
+
+        function clearData() {
+            localStorage.clear();
+            sessionStorage.clear();
+            alert("Storage Cleared");
+        }
+
+    </script>
+
+</body>
+</html>

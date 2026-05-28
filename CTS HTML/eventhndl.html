@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Actions</title>
+
+    <style>
+
+        img {
+            width: 200px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Event Registration</h2>
+
+    <!-- Phone Validation -->
+    Phone Number:
+    <input type="text" id="phone" onblur="checkPhone()">
+    <p id="phoneMsg"></p>
+
+    <br>
+
+    <!-- Dropdown -->
+    Select Event:
+    <select onchange="showFee()" id="event">
+
+        <option value="">Choose</option>
+        <option value="200">Music Event</option>
+        <option value="300">Sports Event</option>
+        <option value="500">Workshop</option>
+
+    </select>
+
+    <p id="fee"></p>
+
+    <br>
+
+    <!-- Submit Button -->
+    <button onclick="confirmMsg()">
+        Submit
+    </button>
+
+    <p id="confirm"></p>
+
+    <br>
+
+    <!-- Image -->
+    <img src="wallhaven-nelgz8_1920x1080.png"
+         ondblclick="bigImage(this)">
+
+    <br><br>
+
+    <!-- Textarea -->
+    Feedback:
+
+    <br>
+
+    <textarea id="text"
+              rows="5"
+              cols="30"
+              onkeyup="countChar()"></textarea>
+
+    <p id="count"></p>
+
+    <script>
+
+        function checkPhone() {
+
+            let num = document.getElementById("phone").value;
+
+            if(num.length == 10) {
+
+                document.getElementById("phoneMsg").innerHTML =
+                "Valid Number";
+
+            }
+
+            else {
+
+                document.getElementById("phoneMsg").innerHTML =
+                "Enter 10 digits";
+
+            }
+
+        }
+
+        function showFee() {
+
+            let fee = document.getElementById("event").value;
+
+            document.getElementById("fee").innerHTML =
+            "Event Fee: ₹" + fee;
+
+        }
+
+        function confirmMsg() {
+
+            document.getElementById("confirm").innerHTML =
+            "Registration Submitted";
+
+        }
+
+        function bigImage(img) {
+
+            img.style.width = "400px";
+
+        }
+
+        function countChar() {
+
+            let text = document.getElementById("text").value;
+
+            document.getElementById("count").innerHTML =
+            "Characters: " + text.length;
+
+        }
+
+    </script>
+
+</body>
+</html>
