@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Showcase - Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bootstrap-fill text-primary"></i> BootShowcase
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="grid.html">Grid</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cards.html">Cards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="navigation.html">Navigation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="display.html">Display</a></li>
+                    <li class="nav-item"><a class="nav-link" href="positioning.html">Positioning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="icons.html">Icons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="mb-5 border-bottom pb-2">Cards & Content Containers</h1>
+
+        <!-- Exercise 1: Profile Card -->
+        <h2 class="h4 mb-4">Profile Card</h2>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card text-center shadow">
+                    <!-- Placeholder image via generate placeholder service or generic color box -->
+                    <img src="https://via.placeholder.com/400x200/0d6efd/ffffff?text=Cover+Image" class="card-img-top" alt="Cover">
+                    <div class="card-body position-relative">
+                        <img src="https://via.placeholder.com/100/ffffff/000000?text=Profile" alt="Profile" class="rounded-circle img-thumbnail position-absolute top-0 start-50 translate-middle" style="width: 100px; height: 100px;">
+                        <h5 class="card-title mt-4 pt-3 fw-bold">John Doe</h5>
+                        <p class="card-text text-muted">Senior UI/UX Designer with a passion for beautiful interfaces and seamless experiences.</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <button class="btn btn-outline-primary btn-sm"><i class="bi bi-person-plus-fill"></i> Follow</button>
+                            <button class="btn btn-primary btn-sm"><i class="bi bi-chat-fill"></i> Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 2: Pricing Cards with spacing utilities -->
+        <h2 class="h4 mb-4">Pricing Cards (Spacing Utilities)</h2>
+        <div class="row row-cols-1 row-cols-md-3 mb-5 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Free</h4>
+                    </div>
+                    <div class="card-body px-4 py-5">
+                        <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4 space-y-2">
+                            <li class="mb-2">10 users included</li>
+                            <li class="mb-2">2 GB of storage</li>
+                            <li class="mb-2">Email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow border-primary">
+                    <div class="card-header py-3 text-white bg-primary border-primary">
+                        <h4 class="my-0 fw-normal">Pro</h4>
+                    </div>
+                    <div class="card-body px-4 py-5">
+                        <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li class="mb-2">20 users included</li>
+                            <li class="mb-2">10 GB of storage</li>
+                            <li class="mb-2">Priority email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3 bg-dark text-white">
+                        <h4 class="my-0 fw-normal">Enterprise</h4>
+                    </div>
+                    <div class="card-body px-4 py-5">
+                        <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li class="mb-2">30 users included</li>
+                            <li class="mb-2">15 GB of storage</li>
+                            <li class="mb-2">Phone and email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-dark">Contact us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 3: Contextual backgrounds, rounded corners -->
+        <h2 class="h4 mb-4">Contextual Backgrounds & Shapes</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card text-white bg-success rounded-4 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Success Card</h5>
+                        <p class="card-text">This card uses the bg-success class to indicate a successful action or positive state. It also features rounded-4 for extra smooth corners.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-dark bg-warning rounded-0 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Warning Card</h5>
+                        <p class="card-text">This warning card has rounded-0 for sharp corners and a larger shadow-lg utility class.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-white bg-danger border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Danger Card</h5>
+                        <p class="card-text">Using bg-danger for error states. This card has no border (border-0 class applied).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

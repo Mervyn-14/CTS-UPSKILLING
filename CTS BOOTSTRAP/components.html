@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Showcase - JavaScript Components</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bootstrap-fill text-primary"></i> BootShowcase
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="grid.html">Grid</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="navigation.html">Navigation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="display.html">Display</a></li>
+                    <li class="nav-item"><a class="nav-link" href="positioning.html">Positioning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="icons.html">Icons</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="components.html">Components</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 flex-grow-1">
+        <h1 class="mb-5 border-bottom pb-2">JavaScript Components</h1>
+
+        <!-- Exercise 1: Modal popup triggered by button -->
+        <section class="demo-box mb-5">
+            <h2 class="h4 mb-4">Modal Popup</h2>
+            
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg">
+                        <div class="modal-header bg-primary text-white border-0">
+                            <h5 class="modal-title" id="exampleModalLabel">Terms of Service</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>By clicking "Accept", you agree to our terms of service and privacy policy. This is an interactive Bootstrap modal component utilizing <code>bootstrap.bundle.min.js</code>.</p>
+                        </div>
+                        <div class="modal-footer border-0 bg-light">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Accept Terms</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 2: Accordion component -->
+        <section class="demo-box mb-5">
+            <h2 class="h4 mb-4">Accordion (FAQ Example)</h2>
+            <div class="accordion shadow-sm" id="accordionExample">
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is Bootstrap 5?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-muted">
+                            <strong>Bootstrap 5</strong> is the newest version of the popular open-source front-end toolkit for building responsive, mobile-first websites.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Does it require jQuery?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-muted">
+                            No! One of the biggest changes in Bootstrap 5 is that it dropped jQuery as a dependency in favor of vanilla JavaScript.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What are utilities?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-muted">
+                            Utilities are single-purpose classes that can be used to quickly style elements without writing custom CSS (like margins, padding, colors, display).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 3: Collapse component -->
+        <section class="demo-box mb-5">
+            <h2 class="h4 mb-4">Collapse Component</h2>
+            <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                </a>
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Button with data-bs-target
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body shadow-sm border-primary border-top-0 border-end-0 border-bottom-0 border-5">
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Tooltips & Popovers (Bonus Exercise for JS Bundle) -->
+        <section class="demo-box mb-5">
+            <h2 class="h4 mb-4">Tooltips & Popovers</h2>
+            <p class="text-muted mb-3">These require Javascript initialization (handled in script.js).</p>
+            <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                Tooltip on top
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                Tooltip on right
+            </button>
+        </section>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

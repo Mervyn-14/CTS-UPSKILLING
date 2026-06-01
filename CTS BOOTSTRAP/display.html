@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Showcase - Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bootstrap-fill text-primary"></i> BootShowcase
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="grid.html">Grid</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="navigation.html">Navigation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="display.html">Display</a></li>
+                    <li class="nav-item"><a class="nav-link" href="positioning.html">Positioning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="icons.html">Icons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100 min-vh-100">
+            <!-- Exercise 2: Responsive sidebar visible only on tablet and larger screens -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold text-primary" aria-current="page" href="#">
+                                <i class="bi bi-house-door"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">
+                                <i class="bi bi-file-earmark"></i> Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">
+                                <i class="bi bi-cart"></i> Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">
+                                <i class="bi bi-people"></i> Customers
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="px-3 mt-4 mb-1 text-muted text-uppercase fw-bold" style="font-size: 0.8rem;">
+                        <span>Note</span>
+                    </div>
+                    <p class="px-3 text-muted small">This sidebar uses <code>d-none d-md-block</code> to hide on mobile and show on medium screens and up.</p>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-5">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Display Properties</h1>
+                </div>
+
+                <!-- Exercise 1: Demonstrate d-none, d-md-block, d-lg-flex -->
+                <section class="demo-box mb-5">
+                    <h2 class="h4 mb-4">Responsive Display Utility Classes</h2>
+                    
+                    <div class="alert alert-info d-none d-sm-block">
+                        <strong>d-none d-sm-block</strong>: Hidden on XS screens (mobile), visible on SM and up. Shrink your browser to hide me!
+                    </div>
+
+                    <div class="alert alert-warning d-md-none">
+                        <strong>d-md-none</strong>: Visible ONLY on XS and SM screens. Grow your browser to hide me!
+                    </div>
+
+                    <div class="bg-primary text-white p-4 rounded mb-3 d-none d-md-block d-lg-none">
+                        <strong>d-none d-md-block d-lg-none</strong>: Visible ONLY on Medium screens (Tablet). Hidden on mobile and desktop.
+                    </div>
+
+                    <div class="border p-4 bg-light rounded d-none d-lg-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>d-none d-lg-flex</strong>
+                            <p class="mb-0 text-muted">Visible only on Large screens as a flexbox container.</p>
+                        </div>
+                        <button class="btn btn-success">Flex Item Button</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

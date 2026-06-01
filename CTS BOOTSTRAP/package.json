@@ -1,0 +1,10 @@
+{
+  "name": "bootstrap-showcase",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass scss/custom.scss css/custom.css"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
